@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Card Design</title>
+  <style>
+    .p-two{
+      display: none;
+
+    }
+    .p-two{
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 320px;
+      transition: transform 0.3s ease;
+    }
+    
+    /* পুরো পেজের ব্যাকগ্রাউন্ড ও অ্যালাইনমেন্ট */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #252542);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    /* গেম কন্টেইনার/কার্ড ডিজাইন */
+    .p-one {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 320px;
+      transition: transform 0.3s ease;
+    }
+
+    .p-one:hover {
+      transform: translateY(-5px);
+    }
+
+    /* শিরোনাম (Heading) */
+    .p-one h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      color: #00f2fe;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    }
+
+    /* প্লেয়ারের নাম (Paragraph) */
+    .p-one p {
+      font-size: 1.1rem;
+      color: #a5a5d1;
+      text-transform: capitalize;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    /* ইনপুট ফিল্ড (Input Field) */
+    #p1input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 1rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #p1input:focus {
+      border-color: #00f2fe;
+      box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    #p1input::placeholder {
+      color: #66668d;
+    }
+
+    /* সাবমিট বাটন (Button) */
+    #p1btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #0072ff, #00f2fe);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+    }
+
+    #p1btn:hover {
+      background: linear-gradient(45deg, #00f2fe, #0072ff);
+      box-shadow: 0 8px 20px rgba(0, 242, 254, 0.5);
+      transform: scale(1.02);
+    }
+
+    #p1btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Chrome, Safari, Edge, Opera-এর জন্য ইনপুটের তীর (Arrows) লুকানোর জন্য */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="p-one">
+    <h1>Choose number</h1>
+    <p>player one</p>
+    <input id="p1input" type="number" placeholder="Enter your number">
+    <button id="p1btn">Submit</button>
+  </div>
+  <div class="p-two">
+    <h1>Gusse number</h1>
+    <p>player two</p>
+    <input class="p2input" id="p1input" type="number" placeholder="Enter your number">
+    <button class="p2btn" id="p1btn">Submit</button>
+  </div>
+
+<script src="./script.js"></script></body>
+
+</html>
+
+
+
